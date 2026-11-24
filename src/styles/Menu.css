@@ -1,0 +1,341 @@
+
+.menu-page {
+  padding: 30px;
+  background: #fffaf5;
+  min-height: 100vh;
+}
+
+.menu-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.menu-header h1 {
+  font-size: 36px;
+  color: #8b2e16;
+}
+
+.menu-header p {
+  color: #777;
+}
+
+.menu-toolbar {
+  margin-bottom: 25px;
+}
+
+.menu-toolbar input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.menu-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.menu-categories button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  background: #eee;
+  cursor: pointer;
+}
+
+.menu-categories button.active {
+  background: #a63c20;
+  color: white;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.food-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.food-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.food-details {
+  padding: 15px;
+}
+
+.food-details h3 {
+  margin: 10px 0 5px;
+}
+
+.food-details p {
+  color: #777;
+}
+
+.food-type {
+  font-size: 12px;
+  padding: 5px 9px;
+  border-radius: 5px;
+}
+
+.veg {
+  background: #e1f5e4;
+  color: green;
+}
+
+.nonveg {
+  background: #ffe5e5;
+  color: red;
+}
+
+.food-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  gap: 8px;
+}
+
+.food-card-bottom strong {
+  font-size: 18px;
+}
+
+.add-cart-btn {
+  background: #a63c20;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-cart-btn:hover {
+  background: #7e2b17;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quantity-control button {
+  background: #a63c20;
+  color: white;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.no-food {
+  text-align: center;
+  padding: 25px;
+}
+
+.cart-summary {
+  background: white;
+  padding: 25px;
+  margin: 40px auto;
+  max-width: 850px;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.10);
+}
+
+.bill-heading {
+  text-align: center;
+  border-bottom: 2px solid #a63c20;
+  margin-bottom: 20px;
+}
+
+.bill-heading h2 {
+  color: #8b2e16;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.bill-heading p {
+  color: #777;
+}
+
+.restaurant-details {
+  text-align: center;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.restaurant-details h3 {
+  font-size: 23px;
+  color: #8b2e16;
+  margin-bottom: 5px;
+}
+
+.restaurant-details p {
+  margin: 4px 0;
+}
+
+.bill-info {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.bill-info p {
+  margin: 6px 0;
+}
+
+.bill-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.bill-table th,
+.bill-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.bill-table th {
+  background: #a63c20;
+  color: white;
+}
+
+.bill-total {
+  margin-top: 25px;
+  margin-left: auto;
+  max-width: 350px;
+  line-height: 2;
+}
+
+.bill-total p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bill-total h3 {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid #333;
+  padding-top: 12px;
+  color: #a63c20;
+}
+
+.bill-footer {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px dashed #aaa;
+  padding-top: 15px;
+}
+
+.bill-footer p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.print-bill-btn {
+  display: block;
+  margin: 25px auto 0;
+  padding: 13px 25px;
+  font-size: 16px;
+}
+
+.empty-cart {
+  text-align: center;
+  color: #777;
+}
+
+/* PRINT SETTINGS */
+
+@media print {
+  @page {
+    size: A4;
+    margin: 15mm;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  .cart-summary,
+  .cart-summary * {
+    visibility: visible !important;
+  }
+
+  .cart-summary {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 15px !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    box-sizing: border-box;
+  }
+
+  .print-bill-btn {
+    display: none !important;
+  }
+
+  .bill-table th {
+    background: #eee !important;
+    color: black !important;
+    print-color-adjust: exact;
+  }
+
+  .bill-table th,
+  .bill-table td {
+    border: 1px solid black !important;
+    color: black !important;
+  }
+
+  .bill-heading h2,
+  .restaurant-details h3,
+  .bill-total h3 {
+    color: black !important;
+  }
+
+  .bill-footer {
+    color: black !important;
+  }
+
+  .bill-table,
+  .bill-total,
+  .restaurant-details {
+    page-break-inside: avoid;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-page {
+    padding: 15px;
+  }
+
+  .bill-table th,
+  .bill-table td {
+    padding: 7px 4px;
+    font-size: 12px;
+  }
+
+  .cart-summary {
+    padding: 15px;
+  }
+}

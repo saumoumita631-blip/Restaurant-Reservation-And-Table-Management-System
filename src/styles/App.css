@@ -1,0 +1,160 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7f4;
+  color: #263b30;
+}
+
+.navbar {
+  background: #174b38;
+  color: white;
+  padding: 16px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.navbar h2 {
+  margin: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 8px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+  min-height: 65vh;
+}
+
+.card {
+  background: white;
+  padding: 22px;
+  margin: 16px 0;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px #00000010;
+}
+
+.hero {
+  background: #dceee1;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 12px;
+}
+
+h1 {
+  color: #174b38;
+}
+
+button {
+  padding: 11px 16px;
+  margin: 5px;
+  background: #216747;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #123e2c;
+}
+
+input,
+select {
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  padding: 12px;
+  margin: 10px 0 18px;
+  border: 1px solid #cbd6cd;
+  border-radius: 6px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.restaurant-img {
+  width: 100%;
+  max-width: 500px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+footer {
+  background: #174b38;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+.captcha-box {
+  display: block;
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+
+.captcha-box p {
+  margin-bottom: 10px;
+}
+
+.captcha-box input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.captcha-box button {
+  margin-bottom: 10px;
+}
+.captcha-box {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  margin: 20px 0;
+  padding: 15px;
+  border: 2px solid #174b38;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+
+.captcha-box p {
+  color: #174b38;
+  font-size: 16px;
+}
